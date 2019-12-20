@@ -51,17 +51,17 @@ body_5(X1,X2,X3,X4,X5,X6):- ap(X1,X2,X3,X4,X5,X6), beach(X1,X2,X3,X4,X5,X6).
 span(X1,X2,X3,X4,X5,X6):- body_5(X1,X2,X3,X4,X5,X6), X5=1. 
 chn(X1,X2,X3,X4,X5,X6):- body_5(X1,X2,X3,X4,X5,X6), X5=2. 
 jap(X1,X2,X3,X4,X5,X6):- body_5(X1,X2,X3,X4,X5,X6), X5=3. 
-:- body_5(X1,X2,X3,X4,X5,X6), X5!=1, span((X1,X2,X3,X4,X5,X6).
+:- body_5(X1,X2,X3,X4,X5,X6), X5!=1, span(X1,X2,X3,X4,X5,X6).
 :- body_5(X1,X2,X3,X4,X5,X6), X5!=2, not span(X1,X2,X3,X4,X5,X6), chn(X1,X2,X3,X4,X5,X6).
 :- body_5(X1,X2,X3,X4,X5,X6), X5!=3, not span(X1,X2,X3,X4,X5,X6), not chn(X1,X2,X3,X4,X5,X6), jap(X1,X2,X3,X4,X5,X6).
 
-body_6(X1,X2,X3,X4,X5,X6):- ap(X1,X2,X3,X4,X5,X6), beach(X1,X2,X3,X4,X5,X6).
+body_6(X1,X2,X3,X4,X5,X6):- ap(X1,X2,X3,X4,X5,X6), library(X1,X2,X3,X4,X5,X6).
 :- ap(X1,X2,X3,X4,X5,X6), X6=0, body_6(X1,X2,X3,X4,X5,X6).
 :- ap(X1,X2,X3,X4,X5,X6), X6>0, not body_6(X1,X2,X3,X4,X5,X6).
 span(X1,X2,X3,X4,X5,X6):- body_6(X1,X2,X3,X4,X5,X6),X6=2. 
 chn(X1,X2,X3,X4,X5,X6):- body_6(X1,X2,X3,X4,X5,X6), X6=1. 
 jap(X1,X2,X3,X4,X5,X6):- body_6(X1,X2,X3,X4,X5,X6), X6=3. 
-:- body_6(X1,X2,X3,X4,X5,X6), X6!=1, chn((X1,X2,X3,X4,X5,X6).
+:- body_6(X1,X2,X3,X4,X5,X6), X6!=1, chn(X1,X2,X3,X4,X5,X6).
 :- body_6(X1,X2,X3,X4,X5,X6), X6!=2, not chn(X1,X2,X3,X4,X5,X6), span(X1,X2,X3,X4,X5,X6).
 :- body_6(X1,X2,X3,X4,X5,X6), X6!=3, not chn(X1,X2,X3,X4,X5,X6), not span(X1,X2,X3,X4,X5,X6), jap(X1,X2,X3,X4,X5,X6).
 
