@@ -1,2 +1,7 @@
-This is for junyi tao's 505 project. 
-lp file is the code for each sample.
+This is for junyi tao's 505 project to implement LPOD into standard answer set programming.
+The lp files are the source code of implementation examples:
+choose_place.lp is the LPOD model as shown in the final project;
+in schedule.lp, I added one more rules: once cinema is chosen, which type of restaurant will be chosen for dinner;
+in schdule1.lp, I added the similar rule as schedule.lp to every place (cinema, library and beach) which can be chosen. However, since the high time complexity, it cannot finished on my device. 
+
+Based on the observation of the result of schdule1.lp, I identified one more obvious drawback of this method: since this model will test all possible preference degree sets (assume there are n rules and each rule has n candidate heads, the total number of choice should be more than n square). Such work is time and resource consuming, which makes it not suitable for large LPOD problem. One possible way to solve this problem is to ignore some preference degree (just set them to 0, means body is not true) by making use of the conflict of between rules. For instance, in schdule1.lp, if I can set restrictions as: once the cinema is true, the degrees of rules to determine the dinner restaurant choice for beach and library are always 0. I think such method can improve the efficiency significantly if possible.  
